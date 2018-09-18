@@ -1,3 +1,1 @@
-add_lunch_combo cm_hwp6_u06-userdebug
-
-add_lunch_combo full_hwp6_u06-userdebug
+add_lunch_combo cm_hn3_u00-userdebug

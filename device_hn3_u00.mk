@@ -18,8 +18,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.k3v2oem1.cpu.rc:root/init.k3v2oem1.cpu.rc \
     $(LOCAL_PATH)/root/init.k3v2oem1.glove.rc:root/init.k3v2oem1.glove.rc \
     $(LOCAL_PATH)/recovery/ueventd.k3v2oem1.rc:root/ueventd.k3v2oem1.rc \
-    $(LOCAL_PATH)/recovery/ueventd.rc:root/ueventd.rc \
-    $(LOCAL_PATH)/root/init.rc:root/init.rc
+    $(LOCAL_PATH)/recovery/ueventd.rc:root/ueventd.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/sbin/6085downloader:root/sbin/6085downloader \

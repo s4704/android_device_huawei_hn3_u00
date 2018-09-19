@@ -61,7 +61,7 @@ BOARD_HAL_STATIC_LIBRARIES += libhealthd.k3v2oem1
 # adb has root
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
-ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage
+ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=adb
 
 # Graphics
 BOARD_EGL_CFG := $(LOCAL_PATH)/prebuilt/lib/egl/egl.cfg

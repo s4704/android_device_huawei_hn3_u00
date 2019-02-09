@@ -488,7 +488,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ap.interface=wlan1 \
-    persist.sys.usb.config=mtp,adb \
     ro.opengles.version=131072
 
 PRODUCT_PROPERTY_OVERRIDES += \

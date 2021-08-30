@@ -56,27 +56,6 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_TI := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
-TARGET_KERNEL_SOURCE := kernel/huawei/hn3_u00
-TARGET_KERNEL_CONFIG := hisi_k3v2oem1_defconfig
-
-WLAN_MODULES:
-
-	cd hardware/ti/wlan/mac80211/compat_wl18xx && pwd && git reset --hard && git clean -fd
-	make clean -C hardware/ti/wlan/mac80211/compat_wl18xx
-	make -j8 -C hardware/ti/wlan/mac80211/compat_wl18xx KERNEL_DIR=$(KERNEL_OUT) KLIB=$(KERNEL_OUT) KLIB_BUILD=$(KERNEL_OUT) ARCH=arm CROSS_COMPILE="arm-linux-androideabi-"
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/compat/compat.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/compat/sch_codel.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/compat/sch_fq_codel.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/net/mac80211/mac80211.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/net/wireless/cfg80211.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/drivers/net/wireless/ti/wl18xx/wl18xx.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/drivers/net/wireless/ti/wlcore/wlcore.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/drivers/net/wireless/ti/wlcore/wlcore_spi.ko $(KERNEL_MODULES_OUT)
-	mv hardware/ti/wlan/mac80211/compat_wl18xx/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko $(KERNEL_MODULES_OUT)
-	
-TARGET_KERNEL_MODULES := WLAN_MODULES
-
 BOARD_HAL_STATIC_LIBRARIES += libhealthd.k3v2oem1
 
 # adb has root
@@ -109,6 +88,9 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01400000
 
+# Use Prebuild kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+
 # fix this up by examining /proc/mtd on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
@@ -137,7 +119,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
 BOARD_RECOVERY_SWIPE := true
 
-TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/recovery-kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/recovery/init.rc
 
 #TWRP

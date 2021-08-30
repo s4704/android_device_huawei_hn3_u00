@@ -5,9 +5,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product-if-exists, vendor/huawei/hwp6_u06/hwp6_u06-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/hn3_u00/hn3_u00-vendor.mk)
 
-LOCAL_PATH := device/huawei/hwp6_u06
+LOCAL_PATH := device/huawei/hn3_u00
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -456,7 +456,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # Prime spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.manufacturer=HUAWEI \
-    ro.product.model=P6-U06
+    ro.product.model=HN3-U00
 
 # Audio
 PRODUCT_PACKAGES += \

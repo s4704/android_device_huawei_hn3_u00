@@ -1,5 +1,5 @@
 #
-# system.prop for P6-U06
+# system.prop for HN3-U00
 #
 
 rild.libpath=/system/lib/libxgold-ril.so

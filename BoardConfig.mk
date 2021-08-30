@@ -7,7 +7,7 @@ TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USES_GENERIC_AUDIO := false
 
 # inherit from the proprietary version
-include vendor/huawei/hwp6_u06/BoardConfigVendor.mk
+include vendor/huawei/hn3_u00/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -21,7 +21,7 @@ TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_CPU_VARIANT := cortex-a9
 TARGET_ARCH_VARIANT_FPU := neon
 
-TARGET_BOOTLOADER_BOARD_NAME := hwp6_u06
+TARGET_BOOTLOADER_BOARD_NAME := hn3_u00
 TARGET_BOARD_PLATFORM := k3v2oem1
 
 # Local flag
@@ -52,10 +52,10 @@ endif
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_TI := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/hwp6_u06/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/hn3_u00/bluetooth
 
-#TARGET_PREBUILT_KERNEL := device/huawei/hwp6_u06/kernel
-TARGET_KERNEL_SOURCE := kernel/huawei/hwp6_u06
+#TARGET_PREBUILT_KERNEL := device/huawei/hn3_u00/kernel
+TARGET_KERNEL_SOURCE := kernel/huawei/hn3_u00
 TARGET_KERNEL_CONFIG := hisi_k3v2oem1_defconfig
 
 WLAN_MODULES:
@@ -83,7 +83,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage
 
 # Graphics
-BOARD_EGL_CFG := device/huawei/hwp6_u06/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/huawei/hn3_u00/prebuilt/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 
@@ -91,7 +91,7 @@ COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 BOARD_CAMERA_HAVE_ISO := true
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/huawei/hwp6_u06/ril/
+BOARD_RIL_CLASS := ../../../device/huawei/hn3_u00/ril/
 
 # Misc
 BOARD_NEEDS_CUTILS_LOG := true
@@ -129,14 +129,14 @@ BOARD_HAS_LOCKED_BOOTLOADER := true
 RECOVERY_FSTAB_VERSION := 2
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/hwp6_u06/recovery/recovery_keys.c
-TARGET_RECOVERY_FSTAB := device/huawei/hwp6_u06/recovery/recovery.fstab
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/hn3_u00/recovery/recovery_keys.c
+TARGET_RECOVERY_FSTAB := device/huawei/hn3_u00/recovery/recovery.fstab
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
 BOARD_RECOVERY_SWIPE := true
 
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/hwp6_u06/recovery-kernel
-TARGET_RECOVERY_INITRC := device/huawei/hwp6_u06/recovery/init.rc
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/hn3_u00/recovery-kernel
+TARGET_RECOVERY_INITRC := device/huawei/hn3_u00/recovery/init.rc
 
 #TWRP
 HAVE_SELINUX := true

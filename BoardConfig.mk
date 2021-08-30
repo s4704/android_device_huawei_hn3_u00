@@ -89,6 +89,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01400000
 
 # Use Prebuild kernel
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # fix this up by examining /proc/mtd on a running device

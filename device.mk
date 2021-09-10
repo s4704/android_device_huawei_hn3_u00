@@ -427,6 +427,17 @@ PRODUCT_PACKAGES += \
     audioloop \
     codec
 
+# Display
+PRODUCT_PACKAGES += \
+    gralloc.k3v2oem1 \
+    hwcomposer.k3v2oem1 \
+    copybit.k3v2oem1 \
+    libEGL_VIVANTE \
+    libGLESv1_CM_VIVANTE \
+    libGLESv2_VIVANTE \
+    libGLSLC \
+    libGAL
+
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/wifi/p2p_supplicant.conf:/system/etc/wifi/p2p_supplicant.conf

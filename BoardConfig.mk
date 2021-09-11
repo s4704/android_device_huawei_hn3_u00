@@ -8,9 +8,6 @@ USE_CAMERA_STUB := false
 TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USES_GENERIC_AUDIO := false
 
-# inherit from the proprietary version
-include vendor/huawei/hn3_u00/BoardConfigVendor.mk
-
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := k3v2oem1

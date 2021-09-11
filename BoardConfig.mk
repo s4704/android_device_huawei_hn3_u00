@@ -107,3 +107,6 @@ BOARD_VOLD_MAX_PARTITIONS := 19
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/root/recovery.fstab
+
+# Include
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include

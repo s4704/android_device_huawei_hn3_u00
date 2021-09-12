@@ -464,10 +464,6 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libdashplayer
 
-# Enable switch storage
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/etc/init.d/preparesd:/system/etc/init.d/preparesd
-
 PRODUCT_PACKAGES += \
     Torch \
     SOP

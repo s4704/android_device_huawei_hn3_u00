@@ -38,17 +38,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/usr/idc/hisik3_touchscreen.idc:system/usr/idc/hisik3_touchscreen.idc \
-    $(LOCAL_PATH)/prebuilt/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
-    $(LOCAL_PATH)/prebuilt/usr/idc/k3_keypad.idc:system/usr/idc/k3_keypad.idc \
-    $(LOCAL_PATH)/prebuilt/usr/idc/screenovate_keyboard.idc:system/usr/idc/screenovate_keyboard.idc \
-    $(LOCAL_PATH)/prebuilt/usr/idc/synaptics.idc:system/usr/idc/synaptics.idc \
-    $(LOCAL_PATH)/prebuilt/usr/idc/screenovate_mouse.idc:system/usr/idc/screenovate_mouse.idc \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/k3_keypad.kl:system/usr/keylayout/k3_keypad.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/screenovate_keyboard.kl:system/usr/keylayout/screenovate_keyboard.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keychars/screenovate_keyboard.kcm:system/usr/keychars/screenovate_keyboard.kcm
-
 # This device have enough room for precise davick
 PRODUCT_TAGS += dalvik.gc.type-precise
 

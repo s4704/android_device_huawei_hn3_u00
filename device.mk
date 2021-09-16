@@ -17,8 +17,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.k3v2oem1.usb.rc:root/init.k3v2oem1.usb.rc \
     $(LOCAL_PATH)/root/init.k3v2oem1.cpu.rc:root/init.k3v2oem1.cpu.rc \
     $(LOCAL_PATH)/root/init.k3v2oem1.glove.rc:root/init.k3v2oem1.glove.rc \
-    $(LOCAL_PATH)/root/ueventd.k3v2oem1.rc:root/ueventd.k3v2oem1.rc \
-    $(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc
+    $(LOCAL_PATH)/root/ueventd.k3v2oem1.rc:root/ueventd.k3v2oem1.rc
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
